@@ -15,19 +15,10 @@ const Header = () => {
           </Link>
         </p>
         <ul className={styles.headerLinks}>
+       
           <li>
-            <Link href="#">
-              <a>Link1</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a>Link2</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a>Link3</a>
+            <Link href="https://ericpolley.com">
+              <a>ericpolley.com</a>
             </Link>
           </li>
         </ul>

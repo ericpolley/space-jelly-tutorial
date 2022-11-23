@@ -1,11 +1,9 @@
 import Head from 'next/head'
-
 import Layout from '@components/Layout';
 import Header from '@components/Header';
 import Container from '@components/Container';
 import Button from '@components/Button';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-
 import styles from '@styles/Product.module.scss'
 
 export default function Product({ product }) {
@@ -73,10 +71,7 @@ export async function getStaticProps({params}) {
           width
         }
       }
-    }
-
-    
-    `,
+    }`,
     variables: {
       slug: params.productSlug
     }
@@ -92,8 +87,6 @@ export async function getStaticProps({params}) {
     }
   }
 }
-
-
 
 export async function getStaticPaths() {
   const client = new ApolloClient({
@@ -117,16 +110,10 @@ products{
     url
     width
   }
-}
-
-      
-    }
-    
-    `
+}     
+    } `
   });
-  
-
-  
+   
   const paths = data.data.products.map(product => {
     return {
       params: {
@@ -135,11 +122,8 @@ products{
       }
     })
 
- 
-
   return {
     paths,
     fallback: false
   };
-
 }
