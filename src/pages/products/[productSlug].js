@@ -30,7 +30,15 @@ export default function Product({ product }) {
               ${product.price}
             </p>
             <p className={styles.productBuy}>
-              <Button>
+              <Button
+              className="snipcart-add-item"
+              data-item-id={product.id}
+              data-item-price={product.price}
+              data-item-url={`/products/${product.slug}`}
+              data-item-description={product.description}
+              data-item-image={product.image.url}
+              data-item-name={product.name}
+              >
                 Add to Cart
               </Button>
             </p>

@@ -31,14 +31,19 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+        <div className="snipcart-checkout">
         <p className={styles.headerCart}>
           <button>
+            
+          
             <FaShoppingCart />
-            <span>
-              $0.00
+            
+           <span>
+              <div class="snipcart-summary"><span class="snipcart-total-price"></span></div>
             </span>
           </button>
         </p>
+        </div>
         <ul className={styles.headerLocales}>
           <li>
             <Link href="#">
