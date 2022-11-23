@@ -5,6 +5,7 @@ import Container from '@components/Container';
 import Button from '@components/Button';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import styles from '@styles/Product.module.scss'
+import Image from 'next/image';
 
 export default function Product({ product }) {
   return (
@@ -17,7 +18,7 @@ export default function Product({ product }) {
       <Container>
         <div className={styles.productWrapper}>
           <div className={styles.productImage}>
-            <img width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
+            <Image width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
           </div>
           <div className={styles.productContent}>
             <h1>{product.name}</h1>

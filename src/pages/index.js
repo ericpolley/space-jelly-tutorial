@@ -7,7 +7,7 @@ import Container from '@components/Container';
 import Button from '@components/Button';
 
 import products from '@data/products';
-
+import Image from 'next/image';
 import styles from '@styles/Page.module.scss'
 
 export default function Home({ home, products }) {
@@ -45,7 +45,7 @@ export default function Home({ home, products }) {
                 <Link href={`products/${product.slug}`}>
                   <a>
                     <div className={styles.productImage}>
-                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
+                      <Image width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
