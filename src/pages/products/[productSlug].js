@@ -18,7 +18,7 @@ export default function Product({ product }) {
       <Container>
         <div className={styles.productWrapper}>
           <div className={styles.productImage}>
-            <Image width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
+            <img width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
           </div>
           <div className={styles.productContent}>
             <h1>{product.name}</h1>

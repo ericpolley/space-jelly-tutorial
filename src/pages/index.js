@@ -45,7 +45,7 @@ export default function Home({ home, products }) {
                 <Link href={`products/${product.slug}`}>
                   <a>
                     <div className={styles.productImage}>
-                      <Image width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
+                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt="123" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
